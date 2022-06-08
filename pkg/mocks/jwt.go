@@ -9,7 +9,7 @@ import (
 // JWT If true, returns no errors with string ok, otherwise returns error.
 type JWT bool
 
-func (t JWT) Create(time.Duration, jwt.MapClaims) (string, error) {
+func (t JWT) Create(time.Duration, string, jwt.MapClaims) (string, error) {
 	if t {
 		return "ok", nil
 	} else {
